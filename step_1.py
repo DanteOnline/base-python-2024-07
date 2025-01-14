@@ -47,4 +47,5 @@ def read_templated_html(request: Request):  # pylint: disable=missing-function-d
     }
     return templates.TemplateResponse("step_1.html", context)
 
+
 # Запуск приложения uvicorn step_1:app --reload
