@@ -11,6 +11,7 @@ def test_json(client):
 
 
 def test_html(client):
+    # pylint: disable=duplicate-code
     expected = """
     <html>
         <head>
