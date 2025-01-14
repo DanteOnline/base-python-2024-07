@@ -39,7 +39,7 @@ def read_html():
 
 # Определяем маршрут, использующий шаблон Jinja2 для формирования ответа
 @app.get("/template", response_class=HTMLResponse)
-def read_templated_html(request: Request):
+def read_templated_html(request: Request):  # pylint: disable=missing-function-docstring
     context = {
         "request": request,
         "title": "Hello, Templated World!",
@@ -47,6 +47,4 @@ def read_templated_html(request: Request):
     }
     return templates.TemplateResponse("step_1.html", context)
 
-
-"""Запуск приложения 
-uvicorn step_1:app --reload"""
+# Запуск приложения uvicorn step_1:app --reload
